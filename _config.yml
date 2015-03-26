@@ -1,7 +1,7 @@
 # Site wide configuration
 
-title:            Site Title
-locale:           en_US
+title: Learn Everyday
+locale: en_US
 url:              
 
 # Jekyll configuration
@@ -28,13 +28,13 @@ kramdown:
 owner:
   name: Alexandr Cherepanov
   avatar: bio-photo.jpg
-  bio: "Web developer interesting in all new things."
+  bio: "Web developer interesting in new knowledge."
   email: xandr.cherepanov@gmail.com
   disqus-shortname: 
-  twitter: #username
-  facebook: #username
+  twitter: "@XandrCherepanov"
+  facebook: cherepanov.alexander
   google:
-    plus: #username
+    plus: 103097627460144153506
     analytics: 
     verify: 
     ad-client: 
