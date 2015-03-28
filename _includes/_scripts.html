@@ -22,6 +22,7 @@
 {% if page.comments %}
   {% include _disqus_comments.html %}
 {% endif %}
+{% include _disqus_count.html %}
 
 {% if page.share != false %}
 <script>
@@ -31,8 +32,8 @@
 
       var url = "https://twitter.com/intent/tweet?" + $.param({
         url: "{{ site.url }}{{ page.url }}",
-        text: "{{ page.title }}",
-        via: "XandrCherepanov"
+        text: "{{ page.title }}"
+        {% if site.owner.twitter %}, via: "{{ site.owner.twitter }}"{% endif %}
       });
 
       var popupWidth = 550,

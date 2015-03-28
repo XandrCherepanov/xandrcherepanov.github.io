@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title: Learn Everyday
+title: Learn Every Day
 locale: en_US
 url: http://xandrcherepanov.github.io
 
@@ -31,7 +31,7 @@ owner:
   bio: "Web developer interesting in new knowledge."
   email: xandr.cherepanov@gmail.com
   disqus-shortname: xandr
-  twitter: "@XandrCherepanov"
+  twitter: "XandrCherepanov"
   facebook: cherepanov.alexander
   google:
     plus: 103097627460144153506
