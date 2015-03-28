@@ -1,12 +1,11 @@
 ---
 layout: page
 title: About this blog
-comments: true
 share: false
 image:
-  feature: sample-image-2.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature: home-office-595476_1920.jpg
+  credit: 
+  creditlink: 
 ---
 
 Hi, I'm Alexandr. Welcome to my blog. Primarily I learn software development and use such programming languages as **Java**, **C#**, **PHP**. And I think there's no ideal programming language. All of them have strong and weak sides. 
