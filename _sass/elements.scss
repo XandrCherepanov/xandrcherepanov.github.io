@@ -18,6 +18,9 @@ hr {
 
 figure {
 	margin-bottom: $indent-var;
+  img {
+    max-height: 50%;
+  }
 }
 
 article img {
@@ -37,7 +40,8 @@ svg:not(:root) {
 .half {
 	@include container;
 	@include clearfix;
-	@media #{$micro} {
+  margin-bottom: $indent-var;
+  @media #{$micro} {
 		img {
 			@include grid(12,6);
 		}
@@ -52,6 +56,7 @@ svg:not(:root) {
 .third {
 	@include container;
 	@include clearfix;
+  margin-bottom: $indent-var;
 	@media #{$micro} {
 		img {
 			@include grid(12,4);

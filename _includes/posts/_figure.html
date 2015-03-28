@@ -1,0 +1,22 @@
+{% assign class = '' %}
+{% if include.image3 %}
+    {% assign class = 'third' %}
+{% elsif include.image2 %}
+	{% assign class = 'half' %}
+{% endif %}
+
+<figure {% unless class == '' %}class="{{ class }}"{% endunless %}>
+	{% if include.image1 %}
+	    <a href="{{ site.url }}{{ include.image1 }}"><img src="{{ site.url }}{{ include.image1 }}"></a>
+	{% endif %}
+	{% if include.image2 %}
+	    <a href="{{ site.url }}{{ include.image2 }}"><img src="{{ site.url }}{{ include.image2 }}"></a>
+	{% endif %}
+	{% if include.image3 %}
+	    <a href="{{ site.url }}{{ include.image3 }}"><img src="{{ site.url }}{{ include.image3 }}"></a>
+	{% endif %}
+  
+	{% if include.caption %}
+		<figcaption>{{ include.caption }}</figcaption>
+	{% endif %}
+</figure>
