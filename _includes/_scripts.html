@@ -18,6 +18,34 @@
   })();
 </script>
 {% endif %}
+
 {% if page.comments %}
   {% include _disqus_comments.html %}
+{% endif %}
+
+{% if page.share != false %}
+<script>
+  $(document).ready(function() {
+    $(".social-share .twitter").on("click", function (evt) {
+      evt.preventDefault();
+
+      var url = "https://twitter.com/intent/tweet?" + $.param({
+        url: "{{ site.url }}{{ page.url }}",
+        text: "{{ page.title }}",
+        via: "XandrCherepanov"
+      });
+
+      var popupWidth = 550,
+          popupHeight = 420,
+          screenWidth = screen.width,
+          screenHeight = screen.height,
+          popupLeftOffset = Math.round(screenWidth / 2 - popupWidth / 2),
+          popupTopOffset = 0;
+      if (screenHeight > popupHeight) {
+        popupTopOffset = Math.round(screenHeight / 2 - popupHeight / 2);
+      }
+      window.open(url, null, "scrollbars=yes,resizable=yes,toolbar=no,location=yes" + ", width=" + popupWidth + ", height=" + popupHeight + ", left=" + popupLeftOffset + ",top=" + popupTopOffset);
+    });
+  });
+</script>
 {% endif %}
