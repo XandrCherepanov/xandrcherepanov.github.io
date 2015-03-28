@@ -272,6 +272,7 @@ $button-size: 1.5rem;
 			.comments {
 				float: right;
 				font-weight: normal;
+				font-style: italic;
 				@include font-rem(16);
 				color: $link-color;
 			}
@@ -340,7 +341,17 @@ $button-size: 1.5rem;
 /* Post byline */
 .byline {
 	clear: both;
-	font-size: 80%;
+	@include font-rem(14);
+	color: lighten($textcolor, 30);
+	time {
+		font-style: italic;
+	}
+	.comments {
+		float: right;
+		font-weight: normal;
+		font-style: italic;
+		color: $link-color;
+	}
 }
 .article-author-side,
 .article-author-bottom {

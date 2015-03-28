@@ -11,13 +11,19 @@ class: post
     {% else %}
       <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
     {% endif %}
+    <p class="byline">
+    {% if site.owner.disqus-shortname and page.comments == true %}
+      <span class="comments"><i class="fa fa-fw fa-comments-o"></i><a href="{{ site.url }}{{ post.url }}#disqus_thread"></a></span>
+    {% endif %}
+    <strong>Published:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{% include _date.html date=page.date %}</time>{% if page.modified %}<br> <strong>Last modified:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{% include _date.html date=page.modified %}</time>{% endif %}
+    </p>
+    
   </div><!--/ .headline-wrap -->
   <div class="article-wrap">
     {{ content }}
     <hr />
     <footer role="contentinfo">
       {% if page.share != false %}{% include _social-share.html %}{% endif %}
-      <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
     </footer>
   </div><!-- /.article-wrap -->
 {% if site.owner.disqus-shortname and page.comments == true %}
