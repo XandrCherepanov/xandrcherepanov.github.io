@@ -2,7 +2,7 @@
 
 title: Learn Everyday
 locale: en_US
-url: http://xandrcherepanov.github.io
+#url: http://xandrcherepanov.github.io
 
 # Jekyll configuration
 
@@ -36,7 +36,7 @@ owner:
   google:
     plus: 103097627460144153506
     analytics: 
-    verify: 
+    verify: "r3apmvMy9iiLPQT8qHzVS8xC3q2AyEzy40Ambop2WP0"
     ad-client: 
     ad-slot: 
   bing-verify: 
