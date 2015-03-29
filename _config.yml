@@ -16,6 +16,33 @@ sass:
 gems:
   - jekyll-sitemap
 
+# Default values for YAML Frontmatter
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+      share: false
+      image:
+        feature: big-image.jpg
+        credit: Olga Cherepanova
+        creditlink: 
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      share: true
+      comments: true
+      image:
+        feature: big-image.jpg
+        credit: Olga Cherepanova
+        creditlink: 
+
 kramdown:
   auto_ids: true
   footnote_nr: 1

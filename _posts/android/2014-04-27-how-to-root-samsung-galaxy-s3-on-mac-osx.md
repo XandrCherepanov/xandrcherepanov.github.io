@@ -1,14 +1,8 @@
 ---
-layout: post
 title: "How to root Samsung Galaxy S3 on Mac OS X"
 modified: 2015-03-22
 tags: [Android, Mac OS X]
 categories: [ android ]
-comments: true
-image:
-  feature: 
-  credit: 
-  creditlink: 
 ---
 
 

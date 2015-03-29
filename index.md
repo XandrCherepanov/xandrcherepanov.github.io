@@ -1,7 +1,5 @@
 ---
 layout: base
-image:
-  feature: home-office-595476_1920.jpg
 ---
 
 <div id="index">
