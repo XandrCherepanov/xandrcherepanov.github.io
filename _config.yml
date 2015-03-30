@@ -50,7 +50,7 @@ defaults:
     values:
       image:
         thumb: "categories/android-thumb.png"
-        feature: 
+        feature: "categories/android-feature.jpg"
         credit: 
 
 kramdown:
