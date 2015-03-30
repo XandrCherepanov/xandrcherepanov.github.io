@@ -13,7 +13,7 @@ class: post
     {% endif %}
     <p class="byline">
     {% if site.owner.disqus-shortname and page.comments == true %}
-      <span class="comments"><i class="fa fa-fw fa-comments-o"></i><a href="{{ site.url }}{{ post.url }}#disqus_thread"></a></span>
+      <span class="comments"><i class="fa fa-fw fa-comments-o"></i><a href="{{ site.url }}{{ page.url }}#disqus_thread"></a></span>
     {% endif %}
     <strong>Published:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{% include _date.html date=page.date %}</time>{% if page.modified %}<br> <strong>Last modified:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{% include _date.html date=page.modified %}</time>{% endif %}
     </p>
