@@ -42,6 +42,16 @@ defaults:
         feature: big-image.jpg
         credit: Olga Cherepanova
         creditlink: 
+  -
+    scope:
+      path: ""
+      type: "posts"
+      category: "android"
+    values:
+      image:
+        thumb: "categories/android-thumb.png"
+        feature: 
+        credit: 
 
 kramdown:
   auto_ids: true
