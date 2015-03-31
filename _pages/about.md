@@ -1,5 +1,6 @@
 ---
 title: About this blog
+permalink: /about/
 ---
 
 Hi, I'm Alexandr. Welcome to my blog. Primarily I learn software development and use such programming languages as **Java**, **C#**, **PHP**. And I think there's no ideal programming language. All of them have strong and weak sides. 

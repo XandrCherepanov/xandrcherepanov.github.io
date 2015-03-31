@@ -2,6 +2,7 @@
 layout: base
 title: All Posts
 excerpt: "A List of Posts"
+permalink: /posts/
 ---
 
 <div id="index">
