@@ -27,26 +27,22 @@
 {% if page.share != false %}
 <script>
   $(document).ready(function() {
-    $(".social-share .twitter").on("click", function (evt) {
-      evt.preventDefault();
+    $(".social-share a").each(function (index) {
+      $(this).on("click", function (evt) {
+        evt.preventDefault();
 
-      var url = "https://twitter.com/intent/tweet?" + $.param({
-        url: "{{ site.url }}{{ page.url }}",
-        text: "{{ page.title }}"
-        {% if site.owner.twitter %}, via: "{{ site.owner.twitter }}"{% endif %}
-      });
-
-      var popupWidth = 550,
-          popupHeight = 420,
-          screenWidth = screen.width,
-          screenHeight = screen.height,
-          popupLeftOffset = Math.round(screenWidth / 2 - popupWidth / 2),
-          popupTopOffset = 0;
-      if (screenHeight > popupHeight) {
-        popupTopOffset = Math.round(screenHeight / 2 - popupHeight / 2);
-      }
-      window.open(url, null, "scrollbars=yes,resizable=yes,toolbar=no,location=yes" + ", width=" + popupWidth + ", height=" + popupHeight + ", left=" + popupLeftOffset + ",top=" + popupTopOffset);
-    });
+        var popupWidth = 550,
+            popupHeight = 420,
+            screenWidth = screen.width,
+            screenHeight = screen.height,
+            popupLeftOffset = Math.round(screenWidth / 2 - popupWidth / 2),
+            popupTopOffset = 0;
+        if (screenHeight > popupHeight) {
+          popupTopOffset = Math.round(screenHeight / 2 - popupHeight / 2);
+        }
+        window.open($(this).attr('href'), null, "menubar=no,toolbar=no,resizable=yes,scrollbars=yes" + ", width=" + popupWidth + ", height=" + popupHeight + ", left=" + popupLeftOffset + ",top=" + popupTopOffset);
+      });    
+    })
   });
 </script>
 {% endif %}
