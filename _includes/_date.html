@@ -1,7 +1,7 @@
 {% if include.mode != 'month' %}
   {% assign d = include.date | date: "%-d" %}
   {% if page.lang == 'ru' %}
-    {{ d }}{% if d == "3" %}-е{% else %}-ое{% endif %} 
+    {{ d }}
   {% else %}
     {{ d }}<sup>{% case d %}
       {% when '1' or '21' or '31' %}st
