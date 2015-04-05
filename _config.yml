@@ -81,9 +81,13 @@ kramdown:
 
 # Site owner
 owner:
-  name: Alexandr Cherepanov
+  name: 
+    en: Alexandr Cherepanov
+    ru: Александр Черепанов
   avatar: bio-photo.jpg
-  bio: "Web developer interesting in new knowledge."
+  bio: 
+    en: "Web developer interesting in new knowledge."
+    ru: "Web-разработчик, интересующийся новыми знаниями."
   email: xandr.cherepanov@gmail.com
   disqus-shortname: xandr
   twitter: "XandrCherepanov"

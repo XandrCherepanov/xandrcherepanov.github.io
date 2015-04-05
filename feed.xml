@@ -11,7 +11,7 @@ layout:
 <updated>{{ site.time | date_to_xmlschema }}</updated>
 <id>{{ site.url }}/</id>
 <author>
-  <name>{{ site.owner.name }}</name>
+  <name>{{ site.owner.name[site.langs.default] }}</name>
   <uri>{{ site.url }}/</uri>
   {% if site.owner.email %}<email>{{ site.owner.email }}</email>{% endif %}
 </author>
@@ -30,7 +30,7 @@ layout:
   {% else %}<published>{{ post.date | date_to_xmlschema }}</published>
   <updated>{{ post.date | date_to_xmlschema }}</updated>{% endif %}
   <author>
-    <name>{{ author.name }}</name>
+    <name>{{ author.name[site.langs.default] }}</name>
     <uri>{{ site.url }}</uri>
     {% if author.email %}<email>{{ author.email }}</email>{% endif %}
   </author>

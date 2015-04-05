@@ -1,0 +1,1 @@
+{{ site.url }}{% if page.lang != site.langs.default %}{{ page.lang | prepend: '/' }}{% endif %}{{ include.url }}

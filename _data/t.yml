@@ -2,6 +2,23 @@
 
 en: 
   recent_posts: Recent Posts
+  photo_credit: Photo Credit
+  related_posts: 
+    title: You might also enjoy
+    view: View all posts
+  share: Share on
+  overview: Overview
+  published: Published
+  modified: Last modified
 
 ru:
   recent_posts: Последние посты
+  photo_credit: Фото
+  related_posts:
+    title: Вам также могут быть интересны
+    view: Показать все посты
+  share: Поделиться на
+  overview: Оглавление
+  published: Опубликовано
+  modified: Последнее обновление
+  

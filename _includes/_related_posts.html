@@ -1,5 +1,5 @@
 <div class="related-articles">
-	<h4>You might also enjoy <small class="pull-right">(<a href="{{ site.url }}/posts/">View all posts</a>)</small></h4>
+	<h4>{{ site.data.t[page.lang].related_posts.title }} <small class="pull-right">(<a href="{% include _url.html url='/posts/' %}">{{ site.data.t[page.lang].related_posts.view }}</a>)</small></h4>
 	<ul>
 	{% for post in site.related_posts limit:3 %}
 	  <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
