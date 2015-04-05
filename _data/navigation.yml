@@ -1,7 +1,17 @@
 # Site navigation links
 
+en:
 - title: About
   url: /about/
 
 - title: Posts
   url: /posts/
+
+
+ru:
+- title: О блоге
+  url: /about/
+
+- title: Посты
+  url: /ru/posts/
+

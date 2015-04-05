@@ -1,4 +1,4 @@
 ---
 layout: pages/home
-permalink: /
+permalink: /ru/
 ---

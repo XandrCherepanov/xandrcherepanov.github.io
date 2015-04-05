@@ -3,6 +3,11 @@
 title: Learn Every Day
 locale: en_US
 url: http://xandrcherepanov.github.io
+langs:
+  all:
+    - ru
+    - en
+  default: en
 
 # Jekyll configuration
 
@@ -26,10 +31,17 @@ defaults:
     values:
       layout: page
       share: false
+      lang: en
       image:
         feature: big-image.jpg
         credit: Olga Cherepanova
         creditlink: 
+  -
+    scope:
+      path: "_pages/ru"
+      type: "pages"
+    values:
+      lang: ru
   -
     scope:
       path: ""
@@ -38,6 +50,7 @@ defaults:
       layout: post
       share: true
       comments: true
+      lang: en
       image:
         feature: big-image.jpg
         credit: Olga Cherepanova
@@ -52,6 +65,11 @@ defaults:
         thumb: "categories/android-thumb.png"
         feature: "categories/android-feature.jpg"
         credit: 
+  -
+    scope:
+      path: "_posts/ru"
+    values:
+      lang: ru
 
 kramdown:
   auto_ids: true
