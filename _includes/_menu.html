@@ -1,0 +1,22 @@
+{% assign links = include.links %}
+
+<ul>
+{% for link in links %}
+  {% if link.url contains 'http' %}
+    {% assign domain = '' %}
+  {% else %}
+    {% assign domain = site.url %}
+  {% endif %}
+  <li{% if link.children %} class="has-sub"{% endif %}>
+  {% if link.url %}
+    <a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a>
+  {% else %}
+    {{ link.title }}
+  {% endif %}
+
+  {% if link.children %}
+    {% include _menu.html links=link.children %}
+  {% endif %}
+  </li>
+{% endfor %}
+</ul>

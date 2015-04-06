@@ -83,6 +83,10 @@ body {
 		padding: 0;
 		clear: both;
 		list-style-type: none;
+		display: inline-block;
+		&.langs {
+			float: right;
+		}
 	}
 	li {
 		display: block;
