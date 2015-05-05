@@ -4,9 +4,6 @@
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
-      {% assign menu_link = site.data.navigation[page.lang] %}
-      {% include _menu.html links=menu_link %}
-      
       <ul class="langs">
 			{% for lang in site.langs.all %}
 				<li class="lang">
@@ -20,6 +17,9 @@
 				</li>
 			{% endfor %}
 	    </ul>
+
+      {% assign menu_link = site.data.navigation[page.lang] %}
+      {% include _menu.html links=menu_link %}
 		</nav>
 	</div><!-- /.top-navigation -->
 </div><!-- /.navigation-wrapper -->
