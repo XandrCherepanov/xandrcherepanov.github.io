@@ -57,9 +57,8 @@ defaults:
         creditlink: 
   -
     scope:
-      path: ""
+      path: "_posts/android"
       type: "posts"
-      category: "android"
     values:
       image:
         thumb: "categories/android-thumb.png"
