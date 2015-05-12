@@ -52,8 +52,8 @@ defaults:
       comments: true
       lang: en
       image:
-        feature: big-image.jpg
-        credit: Olga Cherepanova
+        feature: 
+        credit: 
         creditlink: 
   -
     scope:
