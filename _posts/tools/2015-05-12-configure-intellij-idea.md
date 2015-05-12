@@ -1,5 +1,5 @@
 ---
-title: Configure IntelliJ IDEA
+title: Basic Configuration and Usage of IntelliJ IDEA
 categories: [tools]
 tags: [IntelliJ IDEA, Tools, Video]
 excerpt: In this video explained basic configuration of IntelliJ IDEA and usage of important shortcuts. Also we talk about some plugins for IntelliJ IDEA.
