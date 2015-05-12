@@ -38,6 +38,7 @@ excerpt: In this video explained basic configuration of IntelliJ IDEA and usage 
 ⏎ - Return or Enter<br/>
 ⇥ - Tab<br/>
 ⎋ - Escape<br/>
+{: .notice}
 
 ## Plugins
 
