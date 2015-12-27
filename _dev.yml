@@ -1,6 +1,6 @@
 # Development config to load on local machine
 
-url: 
+url:
 
 # Filtering Content
 show_drafts: true

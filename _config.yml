@@ -35,7 +35,7 @@ defaults:
       image:
         feature: big-image.jpg
         credit: Olga Cherepanova
-        creditlink: 
+        creditlink:
   -
     scope:
       path: "_pages/ru"
@@ -52,9 +52,9 @@ defaults:
       comments: true
       lang: en
       image:
-        feature: 
-        credit: 
-        creditlink: 
+        feature:
+        credit:
+        creditlink:
   -
     scope:
       path: "_posts/android"
@@ -63,7 +63,7 @@ defaults:
       image:
         thumb: "categories/android-thumb.png"
         feature: "categories/android-feature.jpg"
-        credit: 
+        credit:
   -
     scope:
       path: "_posts/ru"
@@ -80,11 +80,11 @@ kramdown:
 
 # Site owner
 owner:
-  name: 
+  name:
     en: Alexandr Cherepanov
     ru: Александр Черепанов
   avatar: bio-photo.jpg
-  bio: 
+  bio:
     en: "Web developer interesting in new knowledge."
     ru: "Web-разработчик, интересующийся новыми знаниями."
   email: xandr.cherepanov@gmail.com
@@ -95,9 +95,9 @@ owner:
     plus: 103097627460144153506
     analytics: UA-61288446-1
     verify: "r3apmvMy9iiLPQT8qHzVS8xC3q2AyEzy40Ambop2WP0"
-    ad-client: 
-    ad-slot: 
-  bing-verify: 
+    ad-client:
+    ad-slot:
+  bing-verify:
   github: XandrCherepanov
   stackoverflow: #http://stackoverflow.com/users/123456/username
   linkedin: #username
