@@ -24,11 +24,11 @@ Every Android phone has two additional modes: **Download** and **Recovery**.
 
 **Download mode**, also known as **ODIN mode**, is used to flash ROMs from computer. You can put your Galaxy S3 into **Download mode** by holding down *Volume Down*, *Center Home*, and *Power* buttons together for about 10 seconds. When you see the warning screen, hit *Volume Up* to enter **ODIN Download mode**. To exit from **Download mode** hold *Power* button about 10 seconds.
 
-{% include posts/_figure.html caption="Download mode warning screen and ODIN download mode." image1='/images/posts/how-to-root-samsung-s3-on-mac-osx/download-mode-warning-screen.jpg' image2='/images/posts/how-to-root-samsung-s3-on-mac-osx/odin-mode.jpg' %}
+{% include posts/_figure.html caption="Download mode warning screen and ODIN download mode." img1='download-mode-warning-screen.jpg' img2='odin-mode.jpg' %}
 
 **Recovery mode** is usefull for reseting your Android device to factory state, or cleaning cache, and etc. You can load into **Recovery mode** by holding down *Volume Up*, *Center Home*, and *Power* buttons together for about 10 seconds. You will see such screen.
 
-{% include posts/_figure.html image1='/images/posts/how-to-root-samsung-s3-on-mac-osx/stock-recovery-mode.jpg' caption='Stock Recovery mode' %}
+{% include posts/_figure.html img1='stock-recovery-mode.jpg' caption='Stock Recovery mode' %}
 
 ## What is a ROM and a stock ROM?  
 
@@ -72,7 +72,7 @@ Put your Galaxy S3 into **Download mode** as described above and connect it to y
 
 Now run **Heimdall-frontend** app in your Application folder. You need to get **.pit** file for your phone. On tab *Utilities* click *Save As...*, and select destination for **s3.pit** file. Then click *Download* button.
 
-{% include posts/_figure.html image1='/images/posts/how-to-root-samsung-s3-on-mac-osx/download-pit-file.jpg' caption='Download PIT file' %}
+{% include posts/_figure.html img1='download-pit-file.jpg' caption='Download PIT file' %}
 
 <div class="notice" markdown="1">
   If Samsung Kies is installed on your Mac, and you get such error `ERROR: Claiming interface failed!` type in terminal this commands:
@@ -93,7 +93,7 @@ After downloading **.pit** file shutdown Galaxy S3 by holding *Power* button abo
 
 If you downloaded **.pit** file in preceding step, reenter your phone to **Download mode**. On tab *Flash* of **Heimdall-frontend** application choose *Browse* and then choose the file **s3.pit** you saved in previous step. Click on *Add*, change Partition Name to *RECOVERY*.  Then choose *Browse* and select the ClockworkMod Recovery image **recovery-clockwork-6.0.4.6-i9300.img**, that you downloaded earlier. Hit *Start* to begin the process. After flashing your phone will then reboot.
 
-{% include posts/_figure.html image1='/images/posts/how-to-root-samsung-s3-on-mac-osx/flash-recovery.jpg' caption='Flash ClockworkMod Recovery' %}
+{% include posts/_figure.html img1='flash-recovery.jpg' caption='Flash ClockworkMod Recovery' %}
 
 If you get errors try type terminal commands from previous step, and reboot **Download mode**.
 {: .notice}
@@ -106,17 +106,17 @@ Connect your Galaxy S3 as a disk drive and copy [SuperSU zip][] (**UPDATE-SuperS
 
 Reboot into **Recovery mode** by holding down *Volume Up*, *Center Home*, and *Power* button together for about 10 seconds. You must see ClockworkMod Recovery screen. Choose *install zip*. Next choose *choose zip from /sdcard* or *choose zip from /storage/sdcard1* depending on where you put the file.
 
-{% include posts/_figure.html image1='/images/posts/how-to-root-samsung-s3-on-mac-osx/cwm-recovery-screen.jpg' image2='/images/posts/how-to-root-samsung-s3-on-mac-osx/cwm-install-from-sdcard.jpg' caption='ClockworkMod Recovery install from sdcard' %}
+{% include posts/_figure.html img1='cwm-recovery-screen.jpg' img2='cwm-install-from-sdcard.jpg' caption='ClockworkMod Recovery install from sdcard' %}
 
 Choose **UPDATE-SuperSU-v1.94.zip**. Then choose **Yes - install UPDATE-SuperSU-v1.94.zip**
 
-{% include posts/_figure.html image1='/images/posts/how-to-root-samsung-s3-on-mac-osx/cwm-select-zip.jpg' image2='/images/posts/how-to-root-samsung-s3-on-mac-osx/cwm-confirm-install.jpg' caption='ClockworkMod Recovery install from sdcard' %}
+{% include posts/_figure.html img1='cwm-select-zip.jpg' img2='cwm-confirm-install.jpg' caption='ClockworkMod Recovery install from sdcard' %}
 
 ### Step 7 
 
 Once it’s done flashing the file **UPDATE-SuperSU-v1.94.zip** (the Superuser zip file), simply reboot and enjoy a fully rooted Galaxy S3. You will find SuperSU app once rebooted. You can now run rooted apps!
 
-{% include posts/_figure.html image1='/images/posts/how-to-root-samsung-s3-on-mac-osx/cwm-final-screen.jpg' image2='/images/posts/how-to-root-samsung-s3-on-mac-osx/supersu-grant-access.jpg' %}
+{% include posts/_figure.html img1='cwm-final-screen.jpg' img2='supersu-grant-access.jpg' %}
 
 [Heimdall]: http://glassechidna.com.au/heimdall/
 [ClockworkMod Recovery]: https://www.clockworkmod.com/rommanager
