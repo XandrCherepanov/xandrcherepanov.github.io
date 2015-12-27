@@ -2,22 +2,22 @@
 	<div class="site-name">
 		<a href="{{ site.url }}/{% unless page.lang == site.langs.default %}{{ page.lang }}{% endunless %}"><img src="{{ site.url }}/images/logo.svg" alt="{{ site.title }}" class="logo"></a>
 	</div><!-- /.site-name -->
-	<div class="top-navigation">
-		<nav role="navigation" id="site-nav" class="nav">
-      <ul class="langs">
-			{% for lang in site.langs.all %}
-				<li class="lang">
-					{% if page.lang == lang %}
-				  	{{ lang }}
-					{% elsif page.lang == site.langs.default %}
-						<a href="{{ site.url }}/{{ lang }}{% if page.translated %}{{ page.url }}{% endif %}">{{ lang }}</a>
-					{% else %}
-						<a href="{{ site.url }}{% if page.translated %}{{ page.url | remove_first: '/' | remove_first: page.lang }}{% else %}/{% endif %}">{{ lang }}</a>
-					{% endif %}	
-				</li>
-			{% endfor %}
-	    </ul>
+	<ul class="langs">
+    {% for lang in site.langs.all %}
+      <li class="lang">
+        {% if page.lang == lang %}
+          {{ lang }}
+        {% elsif page.lang == site.langs.default %}
+          <a href="{{ site.url }}/{{ lang }}{% if page.translated %}{{ page.url }}{% endif %}">{{ lang }}</a>
+        {% else %}
+          <a href="{{ site.url }}{% if page.translated %}{{ page.url | remove_first: '/' | remove_first: page.lang }}{% else %}/{% endif %}">{{ lang }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="top-navigation">
 
+		<nav role="navigation" id="site-nav" class="nav">
       {% assign menu_link = site.data.navigation[page.lang] %}
       {% include _menu.html links=menu_link %}
 		</nav>

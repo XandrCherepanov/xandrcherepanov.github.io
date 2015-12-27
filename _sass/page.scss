@@ -8,7 +8,7 @@ body {
 	color: $text-color;
 }
 
-/* 
+/*
    Header
    ========================================================================== */
 
@@ -34,6 +34,11 @@ body {
 		height: 40px;
 		position: absolute;
 		top: 17px;
+	}
+	@media #{$micro} {
+		@include grid(12,3);
+		@include prefix(12,1);
+		@include suffix(12,1);
 	}
 	@media #{$small} {
 		@include grid(12,2);
@@ -63,21 +68,79 @@ body {
 	}
 }
 
+.langs {
+  @include grid(12,10);
+	@include prefix(12,1);
+	@include suffix(12,1);
+	float: none;
+  padding: 0;
+  list-style-type: none;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0.5em;
+	@media #{$micro} {
+		@include grid(12,3);
+		@include prefix(12,0);
+		@include suffix(12,0);
+    position: absolute;
+    top: 20px;
+	}
+	@media #{$small} {
+		@include grid(12,2,right);
+		@include prefix(12,0);
+		@include suffix(12,0.5);
+		margin-bottom: 1em;
+		margin-top: 0;
+    top: 0;
+    position: static;
+	}
+	@media #{$large} {
+		@include grid(12,1,right);
+		@include suffix(12,3);
+	}
+	@media #{$x-large} {
+		@include grid(12,1,right);
+		@include suffix(12,3.5);
+	}
+  li {
+    float: right;
+		display: inline-block;
+		border-left: 1px solid lighten($black,80);
+		border-left: 1px solid fade($black,10);
+		@include font-rem(16);
+    padding-right: 1em;
+    padding-left: 1em;
+		&:last-child {
+			border-left: 0 solid transparent;
+		}
+		&:first-child {
+      padding-right: 0;
+    }
+		a {
+			display: block;
+			decoration: none;
+			@include transition(all .2s);
+		}
+  }
+}
+
 /* Top navigation links */
 .top-navigation {
 	@include grid(12,10);
 	@include prefix(12,1);
 	@include suffix(12,1);
-	float: none;
 	display: block;
 	@media #{$small} {
-		@include grid(12,9);
+		@include grid(12,6.5);
 		@include prefix(12,0);
 		@include suffix(12,0);
 		margin-bottom: 1em;
 	}
+	@media #{$large} {
+		@include grid(12,5);
+	}
 	@media #{$x-large} {
-		@include grid(12,4.5);	
+		@include grid(12,3.5);
 	}
 	ul {
 		margin: 0;
@@ -85,9 +148,6 @@ body {
 		clear: both;
 		list-style-type: none;
 		display: inline-block;
-		&.langs {
-			float: right;
-		}
 	}
 	li {
 		display: block;
@@ -104,7 +164,7 @@ body {
 			white-space: nowrap;
 			border-bottom: 0 solid transparent;
 		}
-		a { 
+		a {
 			display: block;
 			padding: 10px 0;
 			decoration: none;
@@ -114,11 +174,6 @@ body {
 				display: inline;
 				padding: 0;
 			}
-		}
-		&.lang {
-			float: right;
-			margin-right: 0;
-			margin-left: 25px;
 		}
 	}
 }
@@ -195,11 +250,11 @@ $button-size: 1.5rem;
 	}
 }
 // Style the toggle menu link and hide it
-.nav .navtoogle {	
+.nav .navtoogle {
 	@include font-rem(18);
 	font-weight: normal;
 	background-color: $black;
-	color: $white;	
+	color: $white;
 	border: none;
 	cursor: pointer;
 	@media #{$small} {
@@ -239,7 +294,7 @@ $button-size: 1.5rem;
 	}
 }
 // Displaying the menu when the user has clicked on the button
-.js .nav .active + ul {		
+.js .nav .active + ul {
 	max-height: 30em;
 	overflow: hidden;
 	-webkit-transition: max-height .4s;
@@ -267,9 +322,12 @@ $button-size: 1.5rem;
 		@include suffix(12,1);
 		margin-bottom: 2em;
 		@media #{$small} {
-			@include grid(12,6);
+			@include grid(12,8.5);
 			@include prefix(12,0);
 			@include suffix(12,0);
+		}
+		@media #{$large} {
+			@include grid(12,6);
 		}
 		@media #{$x-large} {
 			@include grid(12,4.5);
@@ -285,10 +343,13 @@ $button-size: 1.5rem;
 	@include suffix(12,1);
 	margin-bottom: 2em;
 	@media #{$small} {
-		@include grid(12,6);
+		@include grid(12,8.5);
 		@include prefix(12,0);
 		@include suffix(12,0);
 	}
+  @media #{$large} {
+    @include grid(12,6);
+  }
 	@media #{$x-large} {
 		@include grid(12,4.5);
 	}
@@ -507,7 +568,7 @@ $button-size: 1.5rem;
 		@include grid(12,2);
 		@include prefix(12,0.5);
 		@include suffix(12,0.5);
-		position: absolute;
+		position: fixed;
 		top: 5.5em;
 		right: 0;
 		background-color: $white;
@@ -599,7 +660,7 @@ $button-size: 1.5rem;
 	margin: 1em 0;
 	li {
 		display: inline;
-		a { 
+		a {
 			border-bottom: 0 solid transparent;
 			&:hover {
 				border-bottom: 0 solid transparent;
@@ -625,7 +686,7 @@ $button-size: 1.5rem;
   li {
   	display: inline-block;
   }
-  $social: 
+  $social:
   (facebook, $facebook-color),
   (flickr, $flickr-color),
   (foursquare, $foursquare-color),
@@ -641,7 +702,7 @@ $button-size: 1.5rem;
   @each $socialnetwork, $color in $social {
     .#{$socialnetwork} {
       background: $color;
-    }    
+    }
   }
   a {
 	  display: block;
@@ -685,7 +746,7 @@ $button-size: 1.5rem;
 	h4,
 	h5,
 	h6,
-	span { 
+	span {
 		@include font-rem(14);
 	}
 	footer {
@@ -693,9 +754,12 @@ $button-size: 1.5rem;
 		@include prefix(12,1);
 		@include suffix(12,1);
 		@media #{$small} {
-			@include grid(12,6);
+			@include grid(12,8.5);
 			@include prefix(12,3);
-			@include suffix(12,3);
+			@include suffix(12,0.5);
+		}
+		@media #{$large} {
+			@include grid(12,6);
 		}
 		@media #{$x-large} {
 			@include grid(12,4.5);
@@ -712,10 +776,13 @@ $button-size: 1.5rem;
 	@include suffix(12,1);
 	margin-bottom: 2em;
 	@media #{$small} {
-		@include grid(12,6);
+		@include grid(12,8.5);
 		@include prefix(12,3);
-		@include suffix(12,3);
+		@include suffix(12,0.5);
 	}
+  @media #{$large} {
+    @include grid(12,6);
+  }
 	@media #{$x-large} {
 		@include grid(12,4.5);
 		@include prefix(12,4);
@@ -730,7 +797,7 @@ $button-size: 1.5rem;
 	}
 }
 
-/* 
+/*
    Browser upgrade alert
    ========================================================================== */
 
@@ -750,7 +817,7 @@ $button-size: 1.5rem;
 		}
 	}
 }
-/* 
+/*
    Google search form
    ========================================================================== */
 
