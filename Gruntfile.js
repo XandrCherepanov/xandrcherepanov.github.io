@@ -53,12 +53,44 @@ module.exports = function(grunt) {
           '<%= jshint.all %>'
         ],
         tasks: ['jshint','uglify']
+      },
+      livereload: {
+        files: [
+          '_config.yml',
+          '_dev.yml',
+          '_data/**',
+          '_drafts/**',
+          '_includes/**',
+          '_layouts/**',
+          '_pages/**'
+          '_posts/**',
+          '_sass/**',
+          'assets/**',
+          'images/**',
+        ],
+        tasks: ['shell:jekyllBuild'],
+        options: {
+          livereload: true
+        }
       }
     },
     clean: {
       dist: [
         'assets/js/scripts.min.js'
       ]
+    },
+    shell: {
+      jekyllBuild: {
+        command: 'jekyll build --config=_config.yml,_dev.yml'
+      }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 4000,
+          base: '_site'
+        }
+      }
     }
   });
 
@@ -68,7 +100,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Register tasks
   grunt.registerTask('default', [
@@ -78,6 +112,8 @@ module.exports = function(grunt) {
     'svgmin'
   ]);
   grunt.registerTask('dev', [
+    'shell',
+    'connect',
     'watch'
   ]);
   grunt.registerTask('images', [
