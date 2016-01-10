@@ -62,11 +62,11 @@ module.exports = function(grunt) {
           '_drafts/**',
           '_includes/**',
           '_layouts/**',
-          '_pages/**'
+          '_pages/**',
           '_posts/**',
           '_sass/**',
           'assets/**',
-          'images/**',
+          'images/**'
         ],
         tasks: ['shell:jekyllBuild'],
         options: {
