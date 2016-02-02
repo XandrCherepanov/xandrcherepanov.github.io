@@ -2,8 +2,6 @@
 title: Install Oracle Database 12c on CentOS 7
 categories: [oracle]
 tags: [Oracle Database, Linux, CentOS, Video]
-layout: post
-lang: en
 ---
 
 <!--more-->
@@ -278,10 +276,10 @@ oracle   soft   memlock  50000000
 oracle   hard   memlock  50000000</ins></div></code></pre>
 </div>
 
-Modify `.bash_profile` for user `oracle` in his home directory, add at the end of the file `/home/oracle/.bash_profile` the following lines. It creates variables which will be used by Oracle database installer.
+Modify `.bashrc` for user `oracle` in his home directory, add at the end of the file `/home/oracle/.bashrc` the following lines. It creates variables which will be used by Oracle database installer.
 
 <div class="terminal">
-<pre><code>[root@ora-c7 ~]# <kbd>vi /home/oracle/.bash_profile</kbd>
+<pre><code>[root@ora-c7 ~]# <kbd>vi /home/oracle/.bashrc</kbd>
 <div class="file"><ins># Oracle Settings
 export TMP=/tmp
 export TMPDIR=$TMP
@@ -470,3 +468,4 @@ Then restart firewall service, add created service `oracledb` to services allowe
 [root@ora-c7 ~]# <kbd>firewall-cmd --list-services</kbd>
 <samp>dhcpv6-client oracledb ssh</samp></code></pre>
 </div>
+
