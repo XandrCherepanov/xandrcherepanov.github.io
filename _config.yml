@@ -13,7 +13,7 @@ langs:
 
 permalink:   /:categories/:title/
 markdown:    kramdown
-highlighter: pygments
+highlighter: rogue
 excerpt_separator: "<!--more-->"
 sass:
   sass_dir: _sass
@@ -84,7 +84,7 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: false
+  enable_coderay: false
 
 
 # Site owner

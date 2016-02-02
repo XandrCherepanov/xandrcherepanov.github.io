@@ -81,7 +81,7 @@ module.exports = function(grunt) {
     },
     shell: {
       jekyllBuild: {
-        command: 'jekyll build --config=_config.yml,_dev.yml'
+        command: 'jekyll build --incremental --config=_config.yml,_dev.yml'
       }
     },
     connect: {
