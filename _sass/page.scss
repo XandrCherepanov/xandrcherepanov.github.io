@@ -147,7 +147,6 @@ body {
     padding: 0;
     clear: both;
     list-style-type: none;
-    display: inline-block;
   }
   li {
     display: block;
@@ -200,7 +199,7 @@ $button-size: 1.5rem;
   opacity: 1;
 }
 .navicon-lines-button:active {
-  transition: 0;
+  transition: all 0s;
 }
 .navicon-lines {
   margin-right: 10px;
