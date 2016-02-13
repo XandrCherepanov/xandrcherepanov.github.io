@@ -30,6 +30,7 @@ defaults:
       type: "pages"
     values:
       layout: page
+      bodyClass: "home"
       share: false
       lang: en
       image:
@@ -48,6 +49,7 @@ defaults:
       type: "posts"
     values:
       layout: post
+      bodyClass: "home"
       share: true
       comments: true
       lang: en
@@ -61,6 +63,7 @@ defaults:
       type: "drafts"
     values:
       layout: post
+      bodyClass: "home"
       share: false
       comments: false
       lang: en
