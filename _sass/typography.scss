@@ -214,10 +214,13 @@ pre {
 	.file {
 		padding: 5px;
 		border: 1px solid lighten($black, 90);
+    display: inline-block;
+    min-width: 97%;
 		ins {
 			display: block;
-			background-color: #b5bd68;
-			color: #1d1f21;
+			color: #b5bd68;
+			//color: #1d1f21;
+      text-decoration: none;
 		}
 		del {
 			display: block;

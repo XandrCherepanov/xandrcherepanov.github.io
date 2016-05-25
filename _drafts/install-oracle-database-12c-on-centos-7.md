@@ -365,7 +365,7 @@ The following environment variables are set as:
     ORACLE_OWNER= oracle
     ORACLE_HOME=  /u01/app/oracle/product/12.1.0/db_1
 
-Enter the full pathname of the local bin directory: [/usr/local/bin]: 
+Enter the full pathname of the local bin directory: [/usr/local/bin]:
    Copying dbhome to /usr/local/bin ...
    Copying oraenv to /usr/local/bin ...
    Copying coraenv to /usr/local/bin ...
@@ -469,3 +469,4 @@ Then restart firewall service, add created service `oracledb` to services allowe
 <samp>dhcpv6-client oracledb ssh</samp></code></pre>
 </div>
 
+Now you can access Enterprise Manager Database Express on <https://10.211.55.9:5500/em> and login as `SYS` user.
