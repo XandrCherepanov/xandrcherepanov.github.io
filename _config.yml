@@ -93,7 +93,7 @@ kramdown:
 # Site owner
 owner:
   name:
-    en: Alexandr Cherepanov
+    en: Alexander Cherepanov
     ru: Александр Черепанов
   avatar: bio-photo.jpg
   bio:
@@ -110,7 +110,7 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: XandrCherepanov
+  github: alexintech
   stackoverflow: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   xing: #username

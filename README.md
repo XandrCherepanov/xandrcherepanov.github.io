@@ -1,4 +1,4 @@
-xandrcherepanov.github.io
+alexin.tech
 =========================
 
-My personal blog for notes about Linux, Mac OS and other
+My personal blog about programming, Linux, Mac OS X and other
